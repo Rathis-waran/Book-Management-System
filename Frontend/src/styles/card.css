@@ -1,0 +1,93 @@
+.book-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.book-card {
+  width: 14rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  background-color: white;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.book-card .card-body {
+  padding: 15px;
+}
+
+.book-card .card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.book-card .card-text {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.book-card .btn {
+  width: 100%;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.book-image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.book-image-container .card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.stock-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  margin: 0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.in-stock {
+  background-color: green;
+  color: white;
+}
+
+.out-of-stock {
+  background-color: red;
+  color: white;
+}
+
+.card-price {
+  font-weight: bolder;
+  color: black;
+}
+
+Button {
+  margin-top: 15px;
+}

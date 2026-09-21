@@ -1,0 +1,167 @@
+.checkout-container {
+  width: 70%;
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.checkout-container h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.checkout-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  background-color: white;
+}
+
+.checkout-card h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.book-section {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.checkout-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  gap: 20px;
+}
+
+.checkout-item:last-child {
+  border-bottom: none;
+}
+
+.checkout-item img {
+  width: 80px;
+  height: 105px;
+  object-fit: cover;
+}
+
+.checkout-item-details {
+  flex: 1;
+}
+
+.checkout-item-details h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.checkout-item-details p {
+  margin: 5px 0;
+}
+
+.checkout-item-details strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+.coupon-section {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.coupon-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  padding: 15px;
+  margin-bottom: 12px;
+  transition: 0.2s;
+}
+
+.coupon-card:last-child {
+  margin-bottom: 0;
+}
+
+.coupon-details h4 {
+  margin: 0 0 5px;
+  font-size: 18px;
+}
+
+.coupon-details p {
+  margin: 5px 0;
+}
+
+.coupon-details small {
+  color: #555;
+}
+
+.coupon-card button {
+  border: none;
+  background-color: #111;
+  color: white;
+  padding: 9px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.coupon-card button:hover {
+  background-color: #333;
+}
+
+.coupon-card button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.coupon-card.selected {
+  border: 2px solid rgb(25, 26, 25);
+  background-color: #f4fff4;
+}
+
+.coupon-card.selected button {
+  background-color: green;
+}
+
+.coupon-card.disabled {
+  opacity: 0.5;
+}
+
+.discount {
+  color: green;
+}
+
+.final-total {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 15px;
+}
+
+.applied-message {
+  margin-top: 10px;
+  color: green;
+  font-size: 14px;
+}
+
+.checkout-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.checkout-buttons button {
+  flex: 1;
+}
+
+.checkout-empty {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.checkout-empty h2 {
+  margin-bottom: 20px;
+}

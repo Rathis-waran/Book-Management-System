@@ -1,0 +1,7 @@
+completed:-
+
+Completed backend CRUD functionalities.Implemented Redux Toolkit with Async Thunks for API calls.Implemented stock validation for books.Implemented coupon functionality.Completed the Checkout flow.Created reusable components. Implemented common Axios API calls.
+
+Yet to Complete:-
+
+pagination for the book listing, stock validation in user ui,

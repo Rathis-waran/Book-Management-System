@@ -1,0 +1,23 @@
+.button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-danger {
+  background-color: red;
+}
+
+.button-primary {
+  background-color: blue;
+}
+.button-success {
+  background-color: green;
+}
+.button-addtocart {
+  background-color: gray;
+}

@@ -1,0 +1,63 @@
+.ordercard {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.header p {
+  margin: 5px 0 0;
+  color: #666;
+}
+
+.label {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.orderitems {
+  margin-top: 15px;
+}
+
+.orderitem {
+  display: flex;
+  gap: 15px;
+  padding: 15px 0;
+}
+
+.bookimage {
+  width: 80px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.order-book-details h3 {
+  margin: 0 0 8px;
+}
+
+.order-book-details p {
+  margin: 5px 0;
+}
+
+.order-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-top: 15px;
+  font-size: 18px;
+}
