@@ -19,9 +19,19 @@ export const orderApi = createApi({
       invalidatesTags: ["Order"],
     }),
 
-    fetchOrders: builder.query<Order[], void>({
-      queryFn: async () => {
-        const response = await getOrders();
+    fetchOrders: builder.query<
+      {
+        orders: Order[];
+        totalorders: number;
+        orderpages: number;
+      },
+      {
+        page: number;
+        limit: number;
+      }
+    >({
+      queryFn: async ({ page, limit }) => {
+        const response = await getOrders(page, limit);
         return {
           data: response,
         };

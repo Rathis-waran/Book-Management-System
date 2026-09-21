@@ -1,4 +1,10 @@
-import { Body, Get, JsonController, Post } from "routing-controllers";
+import {
+  Body,
+  Get,
+  JsonController,
+  Post,
+  QueryParam,
+} from "routing-controllers";
 import { OrderService } from "../service/orderService.js";
 
 @JsonController("/order")
@@ -11,7 +17,10 @@ export class OrderController {
   }
 
   @Get("/allorders")
-  getallorders() {
-    return this.orderService.getallorders();
+  getallorders(
+    @QueryParam("page") page: string = "1",
+    @QueryParam("limit") limit: string = "10",
+  ) {
+    return this.orderService.getallorders(Number(page), Number(limit));
   }
 }

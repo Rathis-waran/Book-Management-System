@@ -7,7 +7,7 @@ export class OrderService {
     return this.orderRepository.addOrder(order);
   }
 
-  getallorders() {
-    return this.orderRepository.getallorders();
+  getallorders(page: number, limit: number) {
+    return this.orderRepository.getallorders(page, limit);
   }
 }

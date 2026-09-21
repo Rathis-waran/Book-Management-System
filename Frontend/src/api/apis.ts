@@ -236,9 +236,11 @@ export async function addOrders(order: OrderResp) {
 
 //get orders
 
-export async function getOrders() {
+export async function getOrders(page: number, limit: number) {
   try {
-    const response = await axios.get("http://localhost:3000/order/allorders");
+    const response = await axios.get(
+      `http://localhost:3000/order/allorders?page=${page}&limit=${limit}`,
+    );
     return response.data;
   } catch (error) {
     return error;

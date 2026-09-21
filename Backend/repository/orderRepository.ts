@@ -17,14 +17,24 @@ export class OrderRepository {
     return "order successfully";
   }
 
-  async getallorders() {
-    const result = await pool.query(`
+  async getallorders(page: number, limit: number) {
+    const offset = (page - 1) * limit;
+    const result = await pool.query(
+      `
     select o.id as order_id,o.cart_id, o.totalamount, o.created_at, oi.book_id, b.title,
     b.image_url, oi.quantity, oi.price
     from orders o join order_items oi on o.id = oi.order_id
     join books b on b.id = oi.book_id
-    order by o.created_at desc
-  `);
-    return result.rows;
+    order by o.created_at desc limit $1 offset $2
+  `,
+      [limit, offset],
+    );
+
+    const resultlength = await pool.query("select * from order_items");
+
+    const totalorders = Number(resultlength.rowCount);
+    const orderpages = Math.ceil(totalorders / limit);
+
+    return { orders: result.rows, totalorders, orderpages };
   }
 }
