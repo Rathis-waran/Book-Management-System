@@ -127,7 +127,7 @@ const CheckoutPage = () => {
           ))}
         </div>
 
-        {coupon.length > 0 && (
+        {coupon.length > 0 ? (
           <div className="checkout-card coupon-section">
             <h2>Available Coupons</h2>
 
@@ -157,6 +157,8 @@ const CheckoutPage = () => {
               );
             })}
           </div>
+        ) : (
+          "There is no coupon Right Now"
         )}
 
         <div className="checkout-card price-summary">
