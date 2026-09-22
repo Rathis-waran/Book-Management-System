@@ -1,7 +1,7 @@
 import { useState } from "react";
 import OrderCard from "../components/OrderCard";
 import { useFetchOrdersQuery } from "../store/orderSlice";
-
+import "../styles/pagination.css";
 const OrdersPage = () => {
   const [page, setPage] = useState(1);
   const limit = 10;
@@ -43,28 +43,37 @@ const OrdersPage = () => {
     });
   }
 
-  const totalPages = data?.orderpages ?? 0;
+  const totalPages = data.orderpages ?? 0;
+  const pages = [];
 
+  for (let i = 1; i <= totalPages; i++) {
+    pages.push(i);
+  }
   return (
     <div>
       {grouporder.map((order) => (
         <OrderCard key={order.order_id} order={order} />
       ))}
-      <div>
+      <div className="pagination">
         <button
+          className="incdecbutton"
           disabled={page === 1}
           onClick={() => setPage((prev) => prev - 1)}
         >
           Previous
         </button>
+
+        {pages.map((pagenum) => (
+          <button
+            className={page === pagenum ? "pagesbutton" : ""}
+            key={pagenum}
+            onClick={() => setPage(pagenum)}
+          >
+            {pagenum}
+          </button>
+        ))}
         <button
-          onClick={() => {
-            page + 1;
-          }}
-        >
-          {page}
-        </button>
-        <button
+          className="incdecbutton"
           disabled={page >= totalPages}
           onClick={() => setPage((prev) => prev + 1)}
         >
