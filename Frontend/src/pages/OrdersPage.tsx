@@ -4,15 +4,17 @@ import { useFetchOrdersQuery } from "../store/orderSlice";
 
 const OrdersPage = () => {
   const [page, setPage] = useState(1);
-
   const limit = 10;
-
   const { data } = useFetchOrdersQuery({
     page,
     limit,
   });
 
-  const orders = data?.orders ?? [];
+  if (!data) {
+    return "data not found";
+  }
+
+  const orders = data.orders ?? [];
   const grouporder: any[] = [];
 
   for (let i = 0; i < orders.length; i++) {
